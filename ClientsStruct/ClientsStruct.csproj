@@ -54,8 +54,14 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.8.2.3\lib\net45\FluentValidation.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.4.1\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
@@ -173,7 +179,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\CompanyAccountsController.cs" />
+    <Compile Include="Controllers\CusComAccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DTOS\AccountDto.cs" />
     <Compile Include="Global.asax.cs">
@@ -183,10 +189,28 @@
     <Compile Include="Migrations\201904121212222_InitialModel.Designer.cs">
       <DependentUpon>201904121212222_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904121652432_CustomerTables.cs" />
+    <Compile Include="Migrations\201904121652432_CustomerTables.Designer.cs">
+      <DependentUpon>201904121652432_CustomerTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904122017492_AddCustomerTables2.cs" />
+    <Compile Include="Migrations\201904122017492_AddCustomerTables2.Designer.cs">
+      <DependentUpon>201904122017492_AddCustomerTables2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904170711205_EmailCurrencyAndDataAnnotations.cs" />
+    <Compile Include="Migrations\201904170711205_EmailCurrencyAndDataAnnotations.Designer.cs">
+      <DependentUpon>201904170711205_EmailCurrencyAndDataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904192006491_AddNiptoCustomerAccount.cs" />
+    <Compile Include="Migrations\201904192006491_AddNiptoCustomerAccount.Designer.cs">
+      <DependentUpon>201904192006491_AddNiptoCustomerAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClientsStructContext.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\CompanyAccount.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\CustomerAccount.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -275,6 +299,18 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201904121212222_InitialModel.resx">
       <DependentUpon>201904121212222_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904121652432_CustomerTables.resx">
+      <DependentUpon>201904121652432_CustomerTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904122017492_AddCustomerTables2.resx">
+      <DependentUpon>201904122017492_AddCustomerTables2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904170711205_EmailCurrencyAndDataAnnotations.resx">
+      <DependentUpon>201904170711205_EmailCurrencyAndDataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904192006491_AddNiptoCustomerAccount.resx">
+      <DependentUpon>201904192006491_AddNiptoCustomerAccount.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

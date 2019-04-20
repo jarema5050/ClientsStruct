@@ -1,24 +1,51 @@
 ﻿<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+    <h1>Nowa baza danych</h1>
+    <p class="lead">Zadanie z obszaru IT Business Services</p>
+    
 </div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>ASP.NET Web API is a framework that makes it easy to build HTTP services that reach
-        a broad range of clients, including browsers and mobile devices. ASP.NET Web API
-        is an ideal platform for building RESTful applications on the .NET Framework.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301870">Learn more &raquo;</a></p>
+    <div class="col-md-8">
+        <h2>Założenia</h2>
+        <ol>
+            <li>
+                Imię	<br />
+                Imię jest polem wymaganym. Maksymalna ilość znaków – 90.  Znajduje się w tabeli CompanyAccounts oraz Customers. Imię i nazwisko jest wykorzystywane dla rozróżnienia klientów prywatnych.
+            </li>
+            <li>
+                Nazwisko <br />
+                Nazwisko jest polem wymaganym. Maksymalna ilość znaków – 120.  Znajduje się w tabeli CompanyAccounts oraz Customers. Imię i nazwisko jest wykorzystywane dla rozróżnienia klientów prywatnych.
+            </li>
+            <li>
+                Nip <br />
+                Nip jest wymagany dla firm, a opcjonalny dla klienta prywatnego. Nip musi być wpisany w następujących formatach:
+                <ul>
+                    <li>123-123-23-23</li>
+                    <li>123-12-23-123</li>
+                    <li>1231231231</li>
+                    <li>PL1231231231</li>
+                </ul>
+            </li>
+            <li>
+                Nazwa firmy <br />
+                Wymagana do założenia firmy maksymalna ilość znaków to 255. Wykorzystywana do rozróżnienia firm.
+            </li>
+            <li>
+                Email <br />
+                Adres email jest wymagany. Przy wprowadzeniu adresu email, który już wystąpił w bazie danych poprzedni użytkownicy z tym adresem mają oznaczenie IsThisEmailCurrent==false.
+            </li>
+            <li>
+                Login <br />
+                Jest wymagany i unikatowy z uwagi na logowanie za jego pomocą kiedy email może być nie aktualny.
+            </li>
+            <li>
+                Id <br />
+                Dane klientów są składowane w osobnych tabelach dla klientów prywatnych i firm. W związku z przypisaniem id tylko do części kont podczas dodawania ich do nowej bazy id zostaje nadpisane dla każdego rekordu i w ten sposób 100% danych w nowej bazie będzie miało ID.
+            </li>
+        </ol>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301871">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301872">Learn more &raquo;</a></p>
+        <h2>CusComAccountsController</h2>
+        <p>Kontroler WEB API posiada jedną akcję do postowania danych do nowej bazy. Rekordy ze starej bazy należy przenieść w formacie JSON lub XML.</p>
+        <p>POST /api/CusComAccounts</p>
     </div>
 </div>

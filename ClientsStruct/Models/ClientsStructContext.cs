@@ -22,5 +22,9 @@ namespace ClientsStruct.Models
         public System.Data.Entity.DbSet<ClientsStruct.Models.CompanyAccount> CompanyAccounts { get; set; }
 
         public System.Data.Entity.DbSet<ClientsStruct.Models.Company> Companies { get; set; }
+
+        public System.Data.Entity.DbSet<ClientsStruct.Models.CustomerAccount> CustomerAccounts { get; set; }
+
+        public System.Data.Entity.DbSet<ClientsStruct.Models.Customer> Customers { get; set; }
     }
 }
